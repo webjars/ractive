@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>ractive</artifactId>
-    <version>0.6.0</version>
+    <version>0.6.1-SNAPSHOT</version>
     <name>Ractive.js</name>
     <description>WebJar for Ractive.js</description>
     <url>http://webjars.org</url>
@@ -51,7 +51,7 @@
         <url>http://github.com/webjars/ractive</url>
         <connection>scm:git:https://github.com/webjars/ractive.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/ractive.git</developerConnection>
-        <tag>ractive-0.6.0</tag>
+        <tag>HEAD</tag>
     </scm>
     
     <build>
