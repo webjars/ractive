@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>ractive</artifactId>
-    <version>0.7.1-SNAPSHOT</version>
+    <version>0.7.1</version>
     <name>Ractive.js</name>
     <description>WebJar for Ractive.js</description>
     <url>http://webjars.org</url>
@@ -51,7 +51,7 @@
         <url>http://github.com/webjars/ractive</url>
         <connection>scm:git:https://github.com/webjars/ractive.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/ractive.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>ractive-0.7.1</tag>
     </scm>
     
     <build>
@@ -66,15 +66,15 @@
                         <goals><goal>run</goal></goals>
                         <configuration>
                             <target>
-                                <mkdir dir="${destDir}"/>
-                                <get src="${upstream.url}/ractive-legacy.js" dest="${destDir}"/>
-                                <get src="${upstream.url}/ractive-legacy.min.js" dest="${destDir}"/>
-                                <get src="${upstream.url}/ractive-legacy.runtime.js" dest="${destDir}"/>
-                                <get src="${upstream.url}/ractive-legacy.runtime.min.js" dest="${destDir}"/>
-                                <get src="${upstream.url}/ractive.js" dest="${destDir}"/>
-                                <get src="${upstream.url}/ractive.min.js" dest="${destDir}"/>
-                                <get src="${upstream.url}/ractive.runtime.js" dest="${destDir}"/>
-                                <get src="${upstream.url}/ractive.runtime.min.js" dest="${destDir}"/>
+                                <mkdir dir="${destDir}" />
+                                <get src="${upstream.url}/ractive-legacy.js" dest="${destDir}" />
+                                <get src="${upstream.url}/ractive-legacy.min.js" dest="${destDir}" />
+                                <get src="${upstream.url}/ractive-legacy.runtime.js" dest="${destDir}" />
+                                <get src="${upstream.url}/ractive-legacy.runtime.min.js" dest="${destDir}" />
+                                <get src="${upstream.url}/ractive.js" dest="${destDir}" />
+                                <get src="${upstream.url}/ractive.min.js" dest="${destDir}" />
+                                <get src="${upstream.url}/ractive.runtime.js" dest="${destDir}" />
+                                <get src="${upstream.url}/ractive.runtime.min.js" dest="${destDir}" />
                             </target>
                         </configuration>
                     </execution>
