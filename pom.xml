@@ -11,14 +11,14 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>ractive</artifactId>
-    <version>0.7.1.1</version>
+    <version>0.7.3</version>
     <name>Ractive.js</name>
     <description>WebJar for Ractive.js</description>
     <url>http://webjars.org</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstream.version>0.7.1</upstream.version>
+        <upstream.version>0.7.3</upstream.version>
         <upstream.url>http://cdn.ractivejs.org/${upstream.version}</upstream.url>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${version}</destDir>
         <requirejs>
