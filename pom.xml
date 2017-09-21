@@ -11,15 +11,15 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>ractive</artifactId>
-    <version>0.7.4-SNAPSHOT</version>
+    <version>0.9.3-SNAPSHOT</version>
     <name>Ractive.js</name>
     <description>WebJar for Ractive.js</description>
     <url>http://webjars.org</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstream.version>0.7.3</upstream.version>
-        <upstream.url>http://cdn.ractivejs.org/${upstream.version}</upstream.url>
+        <upstream.version>0.9.3</upstream.version>
+        <upstream.url>https://github.com/ractivejs/ractive/archive/v${upstream.version}.zip</upstream.url>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${version}</destDir>
         <requirejs>
             {
@@ -67,22 +67,13 @@
                         <configuration>
                             <target>
                                 <mkdir dir="${destDir}" />
-                                <get src="${upstream.url}/ractive-legacy.js" dest="${destDir}" />
-                                <get src="${upstream.url}/ractive-legacy.js.map" dest="${destDir}" />
-                                <get src="${upstream.url}/ractive-legacy.min.js" dest="${destDir}" />
-                                <get src="${upstream.url}/ractive-legacy.min.js.map" dest="${destDir}" />
-                                <get src="${upstream.url}/ractive-legacy.runtime.js" dest="${destDir}" />
-                                <get src="${upstream.url}/ractive-legacy.runtime.js.map" dest="${destDir}" />
-                                <get src="${upstream.url}/ractive-legacy.runtime.min.js" dest="${destDir}" />
-                                <get src="${upstream.url}/ractive-legacy.runtime.min.js.map" dest="${destDir}" />
-                                <get src="${upstream.url}/ractive.js" dest="${destDir}" />
-                                <get src="${upstream.url}/ractive.js.map" dest="${destDir}" />
-                                <get src="${upstream.url}/ractive.min.js" dest="${destDir}" />
-                                <get src="${upstream.url}/ractive.min.js.map" dest="${destDir}" />
-                                <get src="${upstream.url}/ractive.runtime.js" dest="${destDir}" />
-                                <get src="${upstream.url}/ractive.runtime.js.map" dest="${destDir}" />
-                                <get src="${upstream.url}/ractive.runtime.min.js" dest="${destDir}" />
-                                <get src="${upstream.url}/ractive.runtime.min.js.map" dest="${destDir}" />
+                                <get src="${upstream.url}" dest="${project.build.directory}/${project.artifactId}.zip"/>
+                                <echo message="unzip archive"/>
+                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}"/>
+                                <echo message="moving resources"/>
+                                <move todir="${destDir}">
+                                    <fileset dir="${project.build.directory}/${project.artifactId}-${upstream.version}"/>
+                                </move>
                             </target>
                         </configuration>
                     </execution>
